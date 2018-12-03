@@ -15,6 +15,7 @@ public class D3 {
         int r = 7;
         int t = 6;
         // m = t * r ^ -b mod p
+        // fermet: a^(p-1) = 1 mod p ==>  a^(p-1-b) = a^(-b) mod p
         BigInteger m = BigInteger.valueOf(t).multiply(BigInteger.valueOf(r).pow(p-1-b)).mod(BigInteger.valueOf(p));
         System.out.println(m);
 	}
